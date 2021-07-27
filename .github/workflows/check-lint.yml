@@ -7,4 +7,4 @@ jobs:
       - name: instal deps
         run: npm i
       - name: lint-code
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: npx eslint src/**/*.js
