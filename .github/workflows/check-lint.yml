@@ -5,6 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: instal deps
-        run: npm i
+        run: |
+          make install
+        # Add environment variables
+        env:
+          CI: true
       - name: lint-code
-        run: npx eslint src/**/*.js
+        run: |
+          make lint
