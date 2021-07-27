@@ -1,6 +1,8 @@
 #Makefile
 
-install:
+install: install-deps
+
+install-deps:
 	npm ci
 
 brain-games: 
@@ -10,4 +12,4 @@ publish:
 	npm publish --dry-run
 
 lint:
-	npx eslint ./src/**/*.js ./bin/**/*.js
+	npx eslint .
